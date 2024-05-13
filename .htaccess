@@ -1,0 +1,6 @@
+RewriteEngine on
+
+# this is all type url apceted
+#RewriteRule ^favicon.ico favicon.ico [L]
+
+#RewriteRule ^(.*) index.php?url=$1 [QSA,L]
