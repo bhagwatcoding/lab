@@ -40,7 +40,7 @@ endif;
 
                 <?php
                 foreach (glob(__DIR__.'/page/*') as $k => $v):
-                
+
                     $fileName = base::pathinfo($v, 'f');
                     echo "<li class='nav-item'>
                                 <a class='nav-link' data-bs-toggle='pill' href='#$fileName'>
@@ -48,18 +48,34 @@ endif;
                                     <span>$fileName</span>
                                 </a>
                             </li>";
-                
+
                 endforeach;
                 ?>
             </ul>
         </div>
 
         <div class="tab-content content">
+          <div id='home' class='tab-pane fade active show'>
+              <div class="homePage">
+                  <h1 class="text-center">Welcome Dashboard</h1>
+            </div>
+
+          </div>
+          <style media="screen">
+            .homePage{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 100%;
+            }
+          </style>
+
+
             <?php
                 foreach (glob(__DIR__.'/page/*') as $k => $v):
                     $viewSection = base::pathinfo($v, 'f');
                     echo "<div id='$viewSection' class='tab-pane fade'>";
-                            require_once $v; 
+                            require_once $v;
                     echo "</div>";
                 endforeach;
                 ?>

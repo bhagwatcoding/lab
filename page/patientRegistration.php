@@ -34,15 +34,15 @@
                         <label class="form-label" for="First name">Age<b class="text-danger">*</b></label>
                         <div class="row">
                             <div class="input-group col">
-                                <input type="number" class="form-control" maxlength="3" placeholder="Year">
+                                <input type="number" class="form-control" maxlength="3" min="1" max="130" placeholder="Year">
                                 <span class="input-group-text">Y</span>
                             </div>
                             <div class="input-group col">
-                                <input type="number" class="form-control" maxlength="3" placeholder="Month">
+                                <input type="number" class="form-control" maxlength="2" min="1" max="11" placeholder="Month">
                                 <span class="input-group-text">M</span>
                             </div>
                             <div class="input-group col">
-                                <input type="number" class="form-control" maxlength="3" placeholder="Days">
+                                <input type="number" class="form-control" maxlength="3" min="1" max="31" placeholder="Days">
                                 <span class="input-group-text">D</span>
                             </div>
                         </div>
@@ -56,7 +56,7 @@
                 <div class="row">
                     <div class="col">
                         <label class="form-label">Gender:</label>
-                        <select class="form-select col" id="sel1" name="sellist">
+                        <select class="form-select col custom-select" id="sel1" name="sellist">
                             <option>Male</option>
                             <option>Female</option>
                             <option>Transgender</option>

@@ -1,5 +1,12 @@
 <?php
 require_once 'vendor.use.php';
+
+session_start();
+if (isset($_POST['uname'])):
+  $_SESSION['hash'] =  $_POST['uname'];
+  header::redirect('');
+endif;
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -32,7 +39,7 @@ require_once 'vendor.use.php';
         <div class="col-12">
             <button class="btn btn-primary float-right" type="submit" name="login">Login</button>
         </div>
-    </form> 
+    </form>
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function () {
